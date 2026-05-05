@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "title": "Complete Web Development Bootcamp",
+        "instructor": "John Doe",
+        "duration": "20 hours",
+        "rating": 4.8,
+        "level": "Beginner",
+        "description": "Learn full-stack web development from scratch.",
+        "image": "https://i.ibb.co.com/46zKm2s/web-develop.jpg",
+        "category": "Development"
+    },
+    {
+        "id": 2,
+        "title": "Advanced JavaScript Mastery",
+        "instructor": "Sarah Smith",
+        "duration": "15 hours",
+        "rating": 4.7,
+        "level": "Intermediate",
+        "description": "Deep dive into modern JavaScript concepts.",
+        "image": "https://i.ibb.co.com/BHvwjRdj/java-Script.jpg",
+        "category": "Development"
+    },
+    {
+        "id": 3,
+        "title": "React JS Complete Guide",
+        "instructor": "Michael Lee",
+        "duration": "18 hours",
+        "rating": 4.9,
+        "level": "Intermediate",
+        "description": "Build dynamic web apps using React.",
+        "image": "https://i.ibb.co.com/fYBQFbfF/react-3.jpg",
+        "category": "Development"
+    },
+    {
+        "id": 4,
+        "title": "UI/UX Design Fundamentals",
+        "instructor": "Emily Clark",
+        "duration": "12 hours",
+        "rating": 4.6,
+        "level": "Beginner",
+        "description": "Learn design principles and user experience basics.",
+        "image": "https://i.ibb.co.com/C5216QJG/ui-ux-4.webp",
+        "category": "Design"
+    },
+    {
+        "id": 5,
+        "title": "Full Stack MERN Project",
+        "instructor": "David Wilson",
+        "duration": "22 hours",
+        "rating": 4.8,
+        "level": "Advanced",
+        "description": "Build real-world apps using MERN stack.",
+        "image": "https://i.ibb.co.com/XZ8C0b7y/Roadmap-to-Mern-stack-developer-5.webp",
+        "category": "Development"
+    },
+    {
+        "id": 6,
+        "title": "Python for Beginners",
+        "instructor": "Sophia Brown",
+        "duration": "14 hours",
+        "rating": 4.7,
+        "level": "Beginner",
+        "description": "Start coding with Python from zero.",
+        "image": "https://i.ibb.co.com/p68zGMTw/python-6.jpg",
+        "category": "Programming"
+    },
+    {
+        "id": 7,
+        "title": "Freelancing Success Guide",
+        "instructor": "Chris Evans",
+        "duration": "10 hours",
+        "rating": 4.5,
+        "level": "Beginner",
+        "description": "Learn how to start and grow your freelance career.",
+        "image": "https://i.ibb.co.com/TMQhNZ4W/Freelancing-success-7.jpg",
+        "category": "Business"
+    },
+    {
+        "id": 8,
+        "title": "Next.js Crash Course",
+        "instructor": "Daniel Kim",
+        "duration": "16 hours",
+        "rating": 4.8,
+        "level": "Intermediate",
+        "description": "Build fast and SEO-friendly web apps with Next.js.",
+        "image": "https://i.ibb.co.com/hFZTNvQz/Nextjs-8.jpg",
+        "category": "Development"
+    },
+    {
+        "id": 9,
+        "title": "Graphic Design Masterclass",
+        "instructor": "Olivia Martinez",
+        "duration": "13 hours",
+        "rating": 4.6,
+        "level": "Beginner",
+        "description": "Master graphic design tools and techniques.",
+        "image": "https://i.ibb.co.com/nsJDcJCB/graphicdesign-9.webp",
+        "category": "Design"
+    },
+    {
+        "id": 10,
+        "title": "Node.js API Development",
+        "instructor": "James Anderson",
+        "duration": "17 hours",
+        "rating": 4.7,
+        "level": "Intermediate",
+        "description": "Create powerful backend APIs with Node.js.",
+        "image": "https://i.ibb.co.com/BHgmnByP/Mongodb-10.png",
+        "category": "Development"
+    },
+    {
+        "id": 11,
+        "title": "Digital Marketing Basics",
+        "instructor": "Emma Taylor",
+        "duration": "11 hours",
+        "rating": 4.5,
+        "level": "Beginner",
+        "description": "Learn SEO, social media, and online marketing.",
+        "image": "https://i.ibb.co.com/bgRc0gC2/Digitalmarketing-11.webp",
+        "category": "Marketing"
+    },
+    {
+        "id": 12,
+        "title": "Data Analysis with Excel",
+        "instructor": "William Scott",
+        "duration": "9 hours",
+        "rating": 4.4,
+        "level": "Beginner",
+        "description": "Analyze and visualize data using Excel.",
+        "image": "https://i.ibb.co.com/6JD52bqJ/Excel-data-analysis-12.webp",
+        "category": "Data"
+    }
+]
