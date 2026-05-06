@@ -1,4 +1,5 @@
 import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -14,9 +15,10 @@ export default async function Home() {
     <main>
       <Hero />
       <AboutSection />
-      <Projects data={data} />
       <Skills />
       <Experience />
+      <Projects data={data} />
+      <ContactSection />
       <Footer />
     </main>
   );
