@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { Card } from "@heroui/react";
 
 export default function ProjectCard({ project }) {
     const cardRef = useRef();
@@ -23,11 +24,11 @@ export default function ProjectCard({ project }) {
     }, []);
 
     return (
-        <div
+        <Card
             ref={cardRef}
-            className="bg-gray-900 p-4 rounded-xl hover:scale-105 transition"
+            className="bg-gray-400 p-4 rounded-xl hover:scale-105 transition"
         >
-            <div className="w-full aspect-square">
+            <div className="w-full md:w-96 md:h-50 aspect-square">
                 <Image
                     src={project?.image}
                     fill
@@ -37,10 +38,12 @@ export default function ProjectCard({ project }) {
                 />
             </div>
 
+            <div>
+                <h3 className="text-xl font-semibold">{project.title}</h3>
 
-            <h3 className="text-xl font-semibold">{project.title}</h3>
+                <p className="text-gray-400 text-sm">{project.description}</p>
 
-            <p className="text-gray-400 text-sm">{project.description}</p>
+            </div>
 
             <div className="mt-3 flex gap-2">
                 <a href={project.live} className="text-purple-400">
@@ -50,6 +53,6 @@ export default function ProjectCard({ project }) {
                     GitHub
                 </a>
             </div>
-        </div>
+        </Card>
     );
 }
