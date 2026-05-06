@@ -4,7 +4,7 @@ import Skills from "@/components/Skills";
 
 export default async function Home() {
 
-  const res = await fetch('/data.json');
+  const res = await fetch('https://coder-two-neon.vercel.app/all-course.json');
   const data = await res.json();
 
   return (
