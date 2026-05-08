@@ -60,9 +60,14 @@ export default function Navbar() {
                 >
 
                     {/* LOGO */}
-                    <h1 className="text-xl font-bold">
-                        <span className="text-orange-300">DEV</span>
-                        <span className="text-fuchsia-500">PORTFOLIO</span>
+                    <h1 className="text-xl font-bold flex items-center gap-1">
+                        <span className="bg-gradient-to-r from-orange-400 to-yellow-300 text-transparent bg-clip-text drop-shadow-sm">
+                            DEV_
+                        </span>
+
+                        <span className="bg-gradient-to-r from-fuchsia-500 to-purple-400 text-transparent bg-clip-text drop-shadow-sm">
+                            BISHWANATH
+                        </span>
                     </h1>
 
                     {/* NAV LINKS */}

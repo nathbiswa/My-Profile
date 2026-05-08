@@ -2,7 +2,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
+import Hero from "@/components/hero/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 

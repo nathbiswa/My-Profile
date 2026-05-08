@@ -85,7 +85,7 @@ export default function ContactSection() {
     }, []);
 
     return (
-        <section
+        <section id="contact"
             ref={sectionRef}
             className="relative py-28 px-6 md:px-20 text-white overflow-hidden
             bg-gradient-to-br from-[#020617] via-[#1e1b4b] to-[#0f172a]"

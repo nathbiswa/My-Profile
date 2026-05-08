@@ -2,14 +2,15 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import MagneticButton from "./MagneticButton";
+import MagneticButton from "../MagneticButton";
 import Typewriter from "typewriter-effect";
-import Particles from "@tsparticles/react";
-import { loadFull } from "tsparticles";
+import CodingMeshBackground from "../CodingMeshBackground";
+import CursorFX from "./CursorFX";
+import FlowParticles from "./FlowParticles";
+import WebGLGrid from "./WebGLGrid";
+import HolographicFog from "./HolographicFog";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function ProHero() {
     const sectionRef = useRef(null);
@@ -19,14 +20,8 @@ export default function ProHero() {
     const imgRef = useRef(null);
     const glowRef = useRef(null);
 
-    // 🎬 GSAP ANIMATION
     useEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "top 80%",
-            },
-        });
+        const tl = gsap.timeline();
 
         tl.from(titleRef.current, {
             y: 100,
@@ -45,24 +40,15 @@ export default function ProHero() {
                 duration: 0.6,
             }, "-=0.4");
 
-        // 🌊 INFINITE FLOAT IMAGE
+        // floating image
         gsap.to(imgRef.current, {
-            y: -18,
+            y: -15,
             duration: 2.5,
             repeat: -1,
             yoyo: true,
             ease: "sine.inOut",
         });
 
-        gsap.to(imgRef.current, {
-            rotate: 2,
-            duration: 3,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut",
-        });
-
-        // 💜 GLOW ANIMATION
         gsap.to(glowRef.current, {
             scale: 1.2,
             opacity: 0.25,
@@ -74,12 +60,6 @@ export default function ProHero() {
 
     }, []);
 
-    // 🌌 PARTICLES
-    const particlesInit = async (engine) => {
-        await loadFull(engine);
-    };
-
-    // 🧭 MOUSE PARALLAX
     const handleMouseMove = (e) => {
         const x = (window.innerWidth / 2 - e.clientX) / 30;
         const y = (window.innerHeight / 2 - e.clientY) / 30;
@@ -101,43 +81,31 @@ export default function ProHero() {
         <section
             ref={sectionRef}
             onMouseMove={handleMouseMove}
-            className="relative h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-14 overflow-hidden bg-black text-white"
+            className="relative h-screen flex items-center justify-between px-6 md:px-14 overflow-hidden text-white"
         >
+            <HolographicFog />
+            <CursorFX />
+            <WebGLGrid />
+            {/* 🌌 BACKGROUND */}
+            <CodingMeshBackground />
 
-            {/* 🌌 PARTICLES BACKGROUND */}
-            <Particles
-                init={particlesInit}
-                options={{
-                    fullScreen: { enable: false },
-                    background: { color: "#000" },
-                    particles: {
-                        number: { value: 60 },
-                        move: { enable: true, speed: 1 },
-                        size: { value: 2 },
-                        opacity: { value: 0.5 },
-                        links: { enable: true, color: "#ffffff" },
-                    },
-                }}
-                className="absolute inset-0"
-            />
+            <FlowParticles />
 
             {/* LEFT SIDE */}
             <div className="flex-1 z-10 space-y-6">
 
-                {/* TITLE */}
-                <h1 ref={titleRef} className="text-4xl md:text-6xl font-bold">
+                <h1 ref={titleRef} className="text-5xl md:text-6xl font-bold">
                     Hi, I'm Biswa 👋
                 </h1>
 
-                {/* TYPEWRITER */}
                 <div ref={textRef} className="text-xl text-gray-300">
                     <Typewriter
                         options={{
                             strings: [
                                 "Frontend Developer 💻",
-                                "Next.js Specialist ⚡",
-                                "GSAP Animation Expert 🚀",
-                                "UI/UX Designer 🎨",
+                                "Next.js Engineer ⚡",
+                                "GSAP Animator 🚀",
+                                "UI Architect 🎨",
                             ],
                             autoStart: true,
                             loop: true,
@@ -146,15 +114,15 @@ export default function ProHero() {
                 </div>
 
                 <p className="text-gray-400 max-w-md">
-                    I build modern, fast & animated web experiences with Next.js, React and GSAP.
+                    I build high-performance animated web experiences with modern stack.
                 </p>
 
-                {/* BUTTON */}
                 <div ref={btnRef}>
-                    <MagneticButton className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg hover:shadow-purple-500/40 transition">
+                    <MagneticButton className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500">
                         Explore Work
                     </MagneticButton>
                 </div>
+
             </div>
 
             {/* RIGHT SIDE */}
