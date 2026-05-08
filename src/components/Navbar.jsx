@@ -60,7 +60,7 @@ export default function Navbar() {
                 >
 
                     {/* LOGO */}
-                    <h1 className="text-xl font-bold flex items-center gap-1">
+                    <h1 className="text-[12px] md:text-xl font-bold flex items-center gap-1">
                         <span className="bg-gradient-to-r from-orange-400 to-yellow-300 text-transparent bg-clip-text drop-shadow-sm">
                             DEV_
                         </span>

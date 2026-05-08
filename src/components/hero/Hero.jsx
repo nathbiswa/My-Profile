@@ -92,13 +92,13 @@ export default function ProHero() {
             <FlowParticles />
 
             {/* LEFT SIDE */}
-            <div className="flex-1 z-10 space-y-6">
+            <div className="flex-1 mt-4 z-10 space-y-6">
 
-                <h1 ref={titleRef} className="text-5xl md:text-6xl font-bold">
-                    Hi, I'm Biswa 👋
+                <h1 ref={titleRef} className=" text-xl md:text-5xl md:text-6xl font-bold">
+                    Hi, I'm Bishwa 👋
                 </h1>
 
-                <div ref={textRef} className="text-xl text-gray-300">
+                <div ref={textRef} className="text-[14px] md:text-xl text-gray-300">
                     <Typewriter
                         options={{
                             strings: [
@@ -113,7 +113,7 @@ export default function ProHero() {
                     />
                 </div>
 
-                <p className="text-gray-400 max-w-md">
+                <p className="text-[12px] md:text-xl text-gray-400 max-w-md">
                     I build high-performance animated web experiences with modern stack.
                 </p>
 
