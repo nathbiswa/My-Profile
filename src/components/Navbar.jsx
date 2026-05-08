@@ -6,21 +6,25 @@ import Link from "next/link";
 
 export default function Navbar() {
     const navRef = useRef();
-    const [active, setActive] = useState("");
+    const [active, setActive] = useState("home");
+
+    // 🔐 AUTH STATE (replace later with BetterAuth hook)
+    const [user, setUser] = useState(null);
+    // Example:
+    // const { user, logout } = useAuth(); ← BetterAuth integration point
 
     useEffect(() => {
-        // GSAP animation
         gsap.from(navRef.current, {
-            y: -50,
+            y: -60,
             opacity: 0,
             duration: 1,
+            ease: "power3.out",
         });
 
-        // Scroll active logic
         const sections = document.querySelectorAll("section");
 
         const handleScroll = () => {
-            let current = "";
+            let current = "home";
 
             sections.forEach((section) => {
                 const top = section.offsetTop - 120;
@@ -43,56 +47,104 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const linkClass = (id) =>
-        active === id
-            ? "text-orange-300 font-bold"
-            : "text-white/70 hover:text-white";
+    const links = ["home", "about", "skills", "experience", "projects", "contact"];
 
     return (
-        <div className="w-full px-10 py-4 fixed top-0 backdrop-blur-md bg-black/40 z-50">
-            <nav ref={navRef}>
-                <div className="flex justify-between items-center">
+        <header className="fixed top-0 w-full z-50">
 
-                    {/* Logo */}
-                    <h1 className="font-bold text-xl">
-                        <span className="text-2xl font-bold text-orange-300">
-                            DEVELOPER
-                        </span>
-                        <span className="text-2xl font-bold text-fuchsia-500">
-                            BISHWANATH
-                        </span>
+            <div className="backdrop-blur-xl bg-black/40 border-b border-white/10">
+
+                <nav
+                    ref={navRef}
+                    className="flex items-center justify-between px-6 md:px-12 py-4"
+                >
+
+                    {/* LOGO */}
+                    <h1 className="text-xl font-bold">
+                        <span className="text-orange-300">DEV</span>
+                        <span className="text-fuchsia-500">PORTFOLIO</span>
                     </h1>
 
-                    {/* Links */}
-                    <div className="flex items-center gap-6">
+                    {/* NAV LINKS */}
+                    <div className="hidden md:flex items-center gap-6">
 
-                        <Link href="#home" className={linkClass("home")}>
-                            Home
-                        </Link>
+                        {links.map((id) => (
+                            <Link
+                                key={id}
+                                href={`#${id}`}
+                                className={`relative text-sm transition px-2 py-1
+                                ${active === id
+                                        ? "text-white"
+                                        : "text-white/60 hover:text-white"
+                                    }`}
+                            >
+                                {id.charAt(0).toUpperCase() + id.slice(1)}
 
-                        <Link href="#about" className={linkClass("about")}>
-                            About
-                        </Link>
-
-                        <Link href="#skills" className={linkClass("skills")}>
-                            Skills
-                        </Link>
-
-                        <Link href="#experience" className={linkClass("experience")}>
-                            Experience
-                        </Link>
-
-                        <Link href="#projects" className={linkClass("projects")}>
-                            Projects
-                        </Link>
-
-                        <Link href="#contact" className={linkClass("contact")}>
-                            Contact
-                        </Link>
+                                {active === id && (
+                                    <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></span>
+                                )}
+                            </Link>
+                        ))}
 
                     </div>
-                </div>
-            </nav>
-        </div>
+
+                    {/* 🔐 AUTH SECTION */}
+                    <div className="flex items-center gap-3">
+
+                        {!user ? (
+                            <>
+                                {/* SIGN IN */}
+                                <Link
+                                    href="/signin"
+                                    className="px-4 py-2 text-sm rounded-full
+                                    border border-white/20 text-white/70
+                                    hover:bg-white/10 hover:text-white transition"
+                                >
+                                    Sign In
+                                </Link>
+
+                                {/* SIGN UP */}
+                                <Link
+                                    href="/signup"
+                                    className="px-4 py-2 text-sm rounded-full
+                                    bg-gradient-to-r from-purple-500 to-blue-500
+                                    hover:scale-105 transition shadow-lg"
+                                >
+                                    Sign Up
+                                </Link>
+                            </>
+                        ) : (
+                            <>
+                                {/* PROFILE (future dashboard ready) */}
+                                <Link
+                                    href="/dashboard"
+                                    className="px-4 py-2 text-sm rounded-full
+                                    bg-white/10 border border-white/20
+                                    hover:bg-white/20 transition"
+                                >
+                                    Dashboard
+                                </Link>
+
+                                {/* LOGOUT (BetterAuth hook ready) */}
+                                <button
+                                    onClick={() => {
+                                        // logout() ← BetterAuth logout here
+                                        setUser(null);
+                                    }}
+                                    className="px-4 py-2 text-sm rounded-full
+                                    bg-red-500/20 text-red-300
+                                    hover:bg-red-500/30 transition"
+                                >
+                                    Logout
+                                </button>
+                            </>
+                        )}
+
+                    </div>
+
+                </nav>
+            </div>
+
+        </header>
     );
 }
