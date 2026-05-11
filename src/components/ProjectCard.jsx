@@ -28,7 +28,7 @@ export default function ProjectCard({ project }) {
     return (
         <div
             ref={cardRef}
-            className="w-full group relative rounded-2xl overflow-hidden
+            className="w-full group relative rounded-2xl 
             bg-white/5 border border-white/10 backdrop-blur-md"
         >
 
