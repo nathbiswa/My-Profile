@@ -10,7 +10,7 @@ import CursorFX from "./CursorFX";
 import FlowParticles from "./FlowParticles";
 import WebGLGrid from "./WebGLGrid";
 import HolographicFog from "./HolographicFog";
-
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export default function ProHero() {
     const sectionRef = useRef(null);
@@ -81,38 +81,37 @@ export default function ProHero() {
         <section
             ref={sectionRef}
             onMouseMove={handleMouseMove}
-            className="w-full min-h-screen  relative flex flex-col md:flex-row items-center justify-between py-10 md:py-2 px-6 md:px-14 overflow-hidden text-white"
+            className="w-full min-h-screen relative flex flex-col md:flex-row items-center justify-between py-10 md:py-2 px-6 md:px-14 overflow-hidden text-white"
         >
+            {/* 🔥 BACKGROUND SYSTEM */}
             <HolographicFog />
             <CursorFX />
             <WebGLGrid />
             <CodingMeshBackground />
             <FlowParticles />
 
-            {/* 🖼 IMAGE (TOP on mobile) */}
-            <div className=" flex-1  flex justify-center relative z-10 order-1 md:order-2 mb-6 md:mb-0">
+            {/* 🖼 IMAGE */}
+            <div className="flex-1 flex justify-center relative z-10 order-1 md:order-2 mb-6 md:mb-0">
 
-                {/* GLOW */}
                 <div
                     ref={glowRef}
                     className="absolute w-full md:w-72 h-52 md:h-72 bg-purple-500 blur-3xl opacity-20 rounded-full"
                 />
 
-                {/* IMAGE */}
                 <div ref={imgRef} className="relative">
                     <Image
                         src="/mylogo.png"
                         alt="profile"
                         width={260}
                         height={260}
-                        className=" mt-20 md:mt-0 md:w-[340px] md:h-[340px] rounded-2xl border border-white/10 shadow-2xl"
+                        className="mt-20 md:mt-0 md:w-[340px] md:h-[340px] rounded-2xl border border-white/10 shadow-2xl"
                     />
                 </div>
 
             </div>
 
-            {/* 📝 TEXT (BOTTOM on mobile) */}
-            <div className=" w-full flex-1 z-10 space-y-4 text-center md:text-left order-2 md:order-1">
+            {/* 📝 TEXT */}
+            <div className="w-full flex-1 z-10 space-y-4 text-center md:text-left order-2 md:order-1">
 
                 <h1 ref={titleRef} className="text-2xl md:text-6xl font-bold">
                     Hi, I'm Bishwa 👋
@@ -137,10 +136,35 @@ export default function ProHero() {
                     I build high-performance animated web experiences with modern stack.
                 </p>
 
-                <div ref={btnRef} className="flex justify-center md:justify-start">
+                {/* 🔥 BUTTONS */}
+                <div ref={btnRef} className="flex gap-4 justify-center md:justify-start flex-wrap">
+
                     <MagneticButton className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500">
                         Explore Work
                     </MagneticButton>
+
+                    {/* Resume */}
+                    <a
+                        href="/resume.pdf"
+                        download
+                        className="px-6 py-3 rounded-full border border-white/20 text-white/80 hover:bg-white/10 transition"
+                    >
+                        Download CV
+                    </a>
+
+                </div>
+
+                {/* 🌐 SOCIAL LINKS */}
+                <div className="flex gap-4 justify-center md:justify-start text-xl pt-2">
+                    <a href="https://github.com/nathbiswa/" target="_blank" className="hover:text-purple-400">
+                        <FaGithub />
+                    </a>
+                    <a href="https://www.linkedin.com/in/bishwa-nath-roy/" target="_blank" className="hover:text-blue-400">
+                        <FaLinkedin />
+                    </a>
+                    <a href="https://www.facebook.com/BishwaNathRoy29/" target="_blank" className="hover:text-blue-500">
+                        <FaFacebook />
+                    </a>
                 </div>
 
             </div>

@@ -1,5 +1,6 @@
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
+import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Hero from "@/components/hero/Hero";
@@ -17,6 +18,7 @@ export default async function Home() {
       <AboutSection />
       <Skills />
       <Experience />
+      <Education />
       <Projects data={data} />
       <ContactSection />
       <Footer />
