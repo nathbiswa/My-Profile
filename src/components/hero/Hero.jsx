@@ -81,7 +81,7 @@ export default function ProHero() {
         <section
             ref={sectionRef}
             onMouseMove={handleMouseMove}
-            className="max-w-full relative min-h-screen flex flex-col md:flex-row items-center justify-between py-10 md:py-2 px-6 md:px-14 overflow-hidden text-white"
+            className="w-full min-h-screen  relative flex flex-col md:flex-row items-center justify-between py-10 md:py-2 px-6 md:px-14 overflow-hidden text-white"
         >
             <HolographicFog />
             <CursorFX />
@@ -90,12 +90,12 @@ export default function ProHero() {
             <FlowParticles />
 
             {/* 🖼 IMAGE (TOP on mobile) */}
-            <div className="flex-1 flex justify-center relative z-10 order-1 md:order-2 mb-6 md:mb-0">
+            <div className=" flex-1  flex justify-center relative z-10 order-1 md:order-2 mb-6 md:mb-0">
 
                 {/* GLOW */}
                 <div
                     ref={glowRef}
-                    className="absolute w-52 md:w-72 h-52 md:h-72 bg-purple-500 blur-3xl opacity-20 rounded-full"
+                    className="absolute w-full md:w-72 h-52 md:h-72 bg-purple-500 blur-3xl opacity-20 rounded-full"
                 />
 
                 {/* IMAGE */}
@@ -112,7 +112,7 @@ export default function ProHero() {
             </div>
 
             {/* 📝 TEXT (BOTTOM on mobile) */}
-            <div className="flex-1 z-10 space-y-4 text-center md:text-left order-2 md:order-1">
+            <div className=" w-full flex-1 z-10 space-y-4 text-center md:text-left order-2 md:order-1">
 
                 <h1 ref={titleRef} className="text-2xl md:text-6xl font-bold">
                     Hi, I'm Bishwa 👋
