@@ -15,7 +15,7 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    const links = ["home", "about", "skills", "experience", "projects", "contact"];
+    const links = ["home", "about", "skills", "experience", "education", "projects", "contact"];
 
     // 🚀 ENTRY
     useEffect(() => {

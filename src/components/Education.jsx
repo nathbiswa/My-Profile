@@ -40,7 +40,7 @@ export default function Education() {
     ];
 
     return (
-        <section className="relative py-20 px-6 md:px-16 text-white">
+        <section id="education" className="relative py-20 px-6 md:px-16 text-white">
 
             {/* 🎨 Background */}
             <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617]" />
