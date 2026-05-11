@@ -81,24 +81,44 @@ export default function ProHero() {
         <section
             ref={sectionRef}
             onMouseMove={handleMouseMove}
-            className="relative h-screen flex items-center justify-between px-6 md:px-14 overflow-hidden text-white"
+            className="max-w-full relative min-h-screen flex flex-col md:flex-row items-center justify-between py-10 md:py-2 px-6 md:px-14 overflow-hidden text-white"
         >
             <HolographicFog />
             <CursorFX />
             <WebGLGrid />
-            {/* 🌌 BACKGROUND */}
             <CodingMeshBackground />
-
             <FlowParticles />
 
-            {/* LEFT SIDE */}
-            <div className="flex-1 mt-4 z-10 space-y-6">
+            {/* 🖼 IMAGE (TOP on mobile) */}
+            <div className="flex-1 flex justify-center relative z-10 order-1 md:order-2 mb-6 md:mb-0">
 
-                <h1 ref={titleRef} className=" text-xl md:text-5xl md:text-6xl font-bold">
+                {/* GLOW */}
+                <div
+                    ref={glowRef}
+                    className="absolute w-52 md:w-72 h-52 md:h-72 bg-purple-500 blur-3xl opacity-20 rounded-full"
+                />
+
+                {/* IMAGE */}
+                <div ref={imgRef} className="relative">
+                    <Image
+                        src="/mylogo.png"
+                        alt="profile"
+                        width={260}
+                        height={260}
+                        className=" mt-20 md:mt-0 md:w-[340px] md:h-[340px] rounded-2xl border border-white/10 shadow-2xl"
+                    />
+                </div>
+
+            </div>
+
+            {/* 📝 TEXT (BOTTOM on mobile) */}
+            <div className="flex-1 z-10 space-y-4 text-center md:text-left order-2 md:order-1">
+
+                <h1 ref={titleRef} className="text-2xl md:text-6xl font-bold">
                     Hi, I'm Bishwa 👋
                 </h1>
 
-                <div ref={textRef} className="text-[14px] md:text-xl text-gray-300">
+                <div ref={textRef} className="text-sm md:text-xl text-gray-300">
                     <Typewriter
                         options={{
                             strings: [
@@ -113,36 +133,14 @@ export default function ProHero() {
                     />
                 </div>
 
-                <p className="text-[12px] md:text-xl text-gray-400 max-w-md">
+                <p className="text-sm md:text-lg text-gray-400 max-w-md mx-auto md:mx-0">
                     I build high-performance animated web experiences with modern stack.
                 </p>
 
-                <div ref={btnRef}>
+                <div ref={btnRef} className="flex justify-center md:justify-start">
                     <MagneticButton className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500">
                         Explore Work
                     </MagneticButton>
-                </div>
-
-            </div>
-
-            {/* RIGHT SIDE */}
-            <div className="flex-1 flex justify-center relative z-10">
-
-                {/* GLOW */}
-                <div
-                    ref={glowRef}
-                    className="absolute w-72 h-72 bg-purple-500 blur-3xl opacity-20 rounded-full"
-                />
-
-                {/* IMAGE */}
-                <div ref={imgRef} className="relative">
-                    <Image
-                        src="/mylogo.png"
-                        alt="profile"
-                        width={340}
-                        height={340}
-                        className="rounded-2xl border border-white/10 shadow-2xl"
-                    />
                 </div>
 
             </div>

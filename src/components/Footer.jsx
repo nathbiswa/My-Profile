@@ -57,14 +57,14 @@ export default function Footer() {
 
                     {/* RIGHT ARTICLE */}
                     <div className="text-right">
-                        <h4 className="text-lg font-semibold mb-4">
+                        <h4 className="text-center md:text-right text-lg font-semibold mb-4">
                             Tech Stack
                         </h4>
-                        <p className="text-gray-300 text-sm">
+                        <p className="text-gray-300 text-center md:text-right text-sm">
                             Next.js • React • Tailwind CSS • GSAP • Node.js
                         </p>
 
-                        <p className="text-gray-400 text-xs mt-4">
+                        <p className="text-gray-400 text-center md:text-right text-xs mt-4">
                             Built with ❤️ by Dev
                         </p>
                     </div>

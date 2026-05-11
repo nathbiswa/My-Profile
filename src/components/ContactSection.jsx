@@ -97,7 +97,7 @@ export default function ContactSection() {
 
             {/* TITLE */}
             <div className="text-center mb-14">
-                <h2 className="text-4xl md:text-5xl font-bold">
+                <h2 className="text-[18px] md:text-5xl font-bold">
                     Let’s Build Something Legendary 🚀
                 </h2>
                 <p className="text-gray-300 mt-4 max-w-xl mx-auto">
