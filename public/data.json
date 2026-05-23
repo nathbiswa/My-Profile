@@ -8,7 +8,9 @@
         "level": "Beginner",
         "description": "Learn full-stack web development from scratch.",
         "image": "https://i.ibb.co.com/46zKm2s/web-develop.jpg",
-        "category": "Development"
+        "category": "Development",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 2,
@@ -19,7 +21,9 @@
         "level": "Intermediate",
         "description": "Deep dive into modern JavaScript concepts.",
         "image": "https://i.ibb.co.com/BHvwjRdj/java-Script.jpg",
-        "category": "Development"
+        "category": "Development",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 3,
@@ -30,7 +34,9 @@
         "level": "Intermediate",
         "description": "Build dynamic web apps using React.",
         "image": "https://i.ibb.co.com/fYBQFbfF/react-3.jpg",
-        "category": "Development"
+        "category": "Development",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 4,
@@ -41,7 +47,9 @@
         "level": "Beginner",
         "description": "Learn design principles and user experience basics.",
         "image": "https://i.ibb.co.com/C5216QJG/ui-ux-4.webp",
-        "category": "Design"
+        "category": "Design",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 5,
@@ -52,7 +60,9 @@
         "level": "Advanced",
         "description": "Build real-world apps using MERN stack.",
         "image": "https://i.ibb.co.com/XZ8C0b7y/Roadmap-to-Mern-stack-developer-5.webp",
-        "category": "Development"
+        "category": "Development",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 6,
@@ -63,7 +73,9 @@
         "level": "Beginner",
         "description": "Start coding with Python from zero.",
         "image": "https://i.ibb.co.com/p68zGMTw/python-6.jpg",
-        "category": "Programming"
+        "category": "Programming",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 7,
@@ -74,7 +86,9 @@
         "level": "Beginner",
         "description": "Learn how to start and grow your freelance career.",
         "image": "https://i.ibb.co.com/TMQhNZ4W/Freelancing-success-7.jpg",
-        "category": "Business"
+        "category": "Business",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 8,
@@ -85,7 +99,9 @@
         "level": "Intermediate",
         "description": "Build fast and SEO-friendly web apps with Next.js.",
         "image": "https://i.ibb.co.com/hFZTNvQz/Nextjs-8.jpg",
-        "category": "Development"
+        "category": "Development",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 9,
@@ -96,7 +112,9 @@
         "level": "Beginner",
         "description": "Master graphic design tools and techniques.",
         "image": "https://i.ibb.co.com/nsJDcJCB/graphicdesign-9.webp",
-        "category": "Design"
+        "category": "Design",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 10,
@@ -107,7 +125,9 @@
         "level": "Intermediate",
         "description": "Create powerful backend APIs with Node.js.",
         "image": "https://i.ibb.co.com/BHgmnByP/Mongodb-10.png",
-        "category": "Development"
+        "category": "Development",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 11,
@@ -118,7 +138,9 @@
         "level": "Beginner",
         "description": "Learn SEO, social media, and online marketing.",
         "image": "https://i.ibb.co.com/bgRc0gC2/Digitalmarketing-11.webp",
-        "category": "Marketing"
+        "category": "Marketing",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     },
     {
         "id": 12,
@@ -129,6 +151,8 @@
         "level": "Beginner",
         "description": "Analyze and visualize data using Excel.",
         "image": "https://i.ibb.co.com/6JD52bqJ/Excel-data-analysis-12.webp",
-        "category": "Data"
+        "category": "Data",
+        "live": "https://appionment-client.vercel.app",
+        "github": "https://github.com/nathbiswa/Health-Care"
     }
 ]

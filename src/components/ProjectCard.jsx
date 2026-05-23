@@ -33,7 +33,7 @@ export default function ProjectCard({ project }) {
         >
 
             {/* IMAGE */}
-            <div className="relative w-full h-56">
+            <div className="relative w-full h-56 overflow-hidden">
 
                 <Image
                     src={project?.image || "/fallback.jpg"}
@@ -57,23 +57,32 @@ export default function ProjectCard({ project }) {
                     {project?.description || "No description"}
                 </p>
 
+                {/* BUTTONS */}
                 <div className="mt-4 flex gap-3">
 
-                    <a
-                        href={project?.live}
-                        target="_blank"
-                        className="text-sm px-3 py-1 rounded-full bg-purple-500/20 text-purple-300"
-                    >
-                        Live
-                    </a>
+                    {/* Live Link */}
+                    {project?.live && (
+                        <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 hover:bg-purple-500/40 transition"
+                        >
+                            Live
+                        </a>
+                    )}
 
-                    <a
-                        href={project?.github}
-                        target="_blank"
-                        className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/70"
-                    >
-                        GitHub
-                    </a>
+                    {/* GitHub Link */}
+                    {project?.github && (
+                        <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/70 hover:bg-white/20 transition"
+                        >
+                            GitHub
+                        </a>
+                    )}
 
                 </div>
 
