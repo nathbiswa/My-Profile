@@ -43,6 +43,7 @@ export default function ProjectCard({ project }) {
                     alt={project?.title || "project"}
                     fill
                     className="object-cover group-hover:scale-110 transition duration-500"
+                    unoptimized
                 />
                 {/* overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />

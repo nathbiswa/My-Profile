@@ -74,6 +74,7 @@ export default async function ProjectDetailPage({ params }) {
                         fill
                         className="object-cover"
                         priority
+                        unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
                 </div>
