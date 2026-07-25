@@ -21,28 +21,28 @@
     },
     {
         "id": 2,
-        "title": "EduPulse — Online Learning Platform",
-        "description": "A feature-rich e-learning platform where instructors can create courses with videos and quizzes, and students can enroll, track progress, and earn certificates upon completion.",
-        "image": "https://i.ibb.co.com/fYBQFbfF/react-3.jpg",
+        "title": "Health Care Appointment System",
+        "description": "A full-stack health care platform where patients can book doctor appointments, manage medical history, and doctors can manage their schedules and patient records.",
+        "image": "https://i.ibb.co.com/TBrsJV3Y/Health-Care.png",
         "tech": [
             "React",
             "Next.js",
-            "Firebase",
+            "Node.js",
+            "MongoDB",
+            "Express.js",
             "Tailwind CSS",
-            "Redux Toolkit",
-            "GSAP",
-            "Stripe"
+            "JWT"
         ],
         "live": "https://appionment-client.vercel.app",
         "github": "https://github.com/nathbiswa/Health-Care",
-        "challenges": "Handling video streaming efficiently while keeping costs low was a major challenge. Implementing quiz logic with randomized questions and preventing cheating through tab-switch detection required creative solutions. Building a responsive video player that works across all devices and integrating Stripe for payment processing were also significant hurdles.",
-        "improvements": "Planning to add AI-powered course recommendations based on user interests and learning history, a live classroom feature with real-time Q&A, gamification elements like leaderboards and badges, and offline content download capability for mobile users."
+        "challenges": "The biggest challenge was implementing a real-time appointment booking system that prevents double-booking. Managing doctor availability slots, time zones, and concurrent user sessions required careful state management and server-side validation. Integrating JWT authentication with role-based access for doctors and patients also added complexity.",
+        "improvements": "Future plans include adding video consultation features using WebRTC, integrating a payment gateway for online consultation fees, implementing automated email/SMS reminders before appointments, and adding a prescription management module with PDF generation."
     },
     {
         "id": 3,
-        "title": "ShopNest — E-Commerce Platform",
-        "description": "A modern e-commerce web application with product browsing, cart management, secure checkout, and an admin dashboard for managing products, orders, and customer data.",
-        "image": "https://i.ibb.co.com/XZ8C0b7y/Roadmap-to-Mern-stack-developer-5.webp",
+        "title": "ReadHaus",
+        "description": "A modern web application featuring intuitive browsing, state management, and a seamless user interface built for performance and user engagement.",
+        "image": "https://i.ibb.co.com/S4GqP3fR/Read-Hourse.png",
         "tech": [
             "Next.js",
             "Node.js",
@@ -52,9 +52,9 @@
             "JWT",
             "Cloudinary"
         ],
-        "live": "https://appionment-client.vercel.app",
-        "github": "https://github.com/nathbiswa/Health-Care",
-        "challenges": "Building a high-performance product filtering and search system that handles large datasets without performance degradation was challenging. Implementing a secure, multi-step checkout flow with cart persistence across sessions, and ensuring the admin dashboard remained performant with real-time order updates required careful architecture decisions.",
-        "improvements": "Future improvements include adding a wishlist and product comparison feature, implementing advanced analytics dashboard for sellers, integrating multiple payment methods including mobile banking (bKash, Nagad), adding product review and rating system, and building a progressive web app (PWA) for offline browsing."
+        "live": "https://read-haus-client.vercel.app",
+        "github": "https://github.com/nathbiswa/ReadHaus-Client",
+        "challenges": "Building a high-performance filtering and search system that handles large datasets without performance degradation was challenging. Implementing a secure flow with data persistence across sessions required careful architecture decisions.",
+        "improvements": "Future improvements include adding advanced analytics, integrating multiple payment methods, adding user reviews, and building a progressive web app (PWA) for offline browsing."
     }
 ]
