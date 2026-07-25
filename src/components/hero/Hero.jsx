@@ -165,10 +165,10 @@ export default function ProHero() {
                     <a href="https://github.com/nathbiswa/" target="_blank" className="hover:text-purple-400">
                         <FaGithub />
                     </a>
-                    <a href="https://www.linkedin.com/in/bishwa-nath-roy/" target="_blank" className="hover:text-blue-400">
+                    <a href="https://www.linkedin.com/in/bishwa-nath-roy" target="_blank" className="hover:text-blue-400">
                         <FaLinkedin />
                     </a>
-                    <a href="https://www.facebook.com/BishwaNathRoy29/" target="_blank" className="hover:text-blue-500">
+                    <a href="https://web.facebook.com/BishwaNathRoy29" target="_blank" className="hover:text-blue-500">
                         <FaFacebook />
                     </a>
                 </div>

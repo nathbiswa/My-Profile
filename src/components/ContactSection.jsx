@@ -36,8 +36,8 @@ const contactInfo = [
 
 const socialLinks = [
     { icon: FaGithub, href: "https://github.com/nathbiswa/", label: "GitHub", color: "hover:text-gray-300" },
-    { icon: FaLinkedin, href: "https://www.linkedin.com/in/bishwa-nath-roy/", label: "LinkedIn", color: "hover:text-blue-400" },
-    { icon: FaFacebook, href: "https://www.facebook.com/BishwaNathRoy29/", label: "Facebook", color: "hover:text-blue-500" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/bishwa-nath-roy", label: "LinkedIn", color: "hover:text-blue-400" },
+    { icon: FaFacebook, href: "https://web.facebook.com/BishwaNathRoy29", label: "Facebook", color: "hover:text-blue-500" },
 ];
 
 export default function ContactSection() {

@@ -46,10 +46,10 @@ export default function Footer() {
                             <a href="https://github.com/nathbiswa/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition hover:scale-125">
                                 <FaGithub />
                             </a>
-                            <a href="https://www.linkedin.com/in/bishwa-nath-roy/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition hover:scale-125">
+                            <a href="https://www.linkedin.com/in/bishwa-nath-roy" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition hover:scale-125">
                                 <FaLinkedin />
                             </a>
-                            <a href="https://www.facebook.com/BishwaNathRoy29/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition hover:scale-125">
+                            <a href="https://web.facebook.com/BishwaNathRoy29" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition hover:scale-125">
                                 <FaFacebook />
                             </a>
                         </div>
