@@ -51,10 +51,10 @@ export default function CodingMeshBackground() {
                 ctx.stroke();
             }
 
-            requestAnimationFrame(animate);
+            rafId = requestAnimationFrame(animate);
         };
 
-        animate();
+        let rafId = requestAnimationFrame(animate);
 
         const resize = () => {
             w = canvas.width = window.innerWidth;
@@ -63,7 +63,10 @@ export default function CodingMeshBackground() {
 
         window.addEventListener("resize", resize);
 
-        return () => window.removeEventListener("resize", resize);
+        return () => {
+            cancelAnimationFrame(rafId);
+            window.removeEventListener("resize", resize);
+        };
     }, []);
 
     return (

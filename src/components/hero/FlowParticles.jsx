@@ -20,6 +20,8 @@ export default function FlowParticles() {
             vy: (Math.random() - 0.5) * 0.8,
         }));
 
+        let rafId;
+
         const animate = () => {
             ctx.clearRect(0, 0, w, h);
 
@@ -58,10 +60,10 @@ export default function FlowParticles() {
                 }
             });
 
-            requestAnimationFrame(animate);
+            rafId = requestAnimationFrame(animate);
         };
 
-        animate();
+        rafId = requestAnimationFrame(animate);
 
         const resize = () => {
             w = canvas.width = window.innerWidth;
@@ -70,7 +72,10 @@ export default function FlowParticles() {
 
         window.addEventListener("resize", resize);
 
-        return () => window.removeEventListener("resize", resize);
+        return () => {
+            cancelAnimationFrame(rafId);
+            window.removeEventListener("resize", resize);
+        };
     }, []);
 
     return (

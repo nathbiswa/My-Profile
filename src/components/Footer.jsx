@@ -43,13 +43,13 @@ export default function Footer() {
                         </h4>
 
                         <div className="flex gap-5 text-2xl">
-                            <a href="#" className="hover:text-purple-400 transition hover:scale-125">
+                            <a href="https://github.com/nathbiswa/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition hover:scale-125">
                                 <FaGithub />
                             </a>
-                            <a href="#" className="hover:text-blue-400 transition hover:scale-125">
+                            <a href="https://www.linkedin.com/in/bishwa-nath-roy/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition hover:scale-125">
                                 <FaLinkedin />
                             </a>
-                            <a href="#" className="hover:text-blue-600 transition hover:scale-125">
+                            <a href="https://www.facebook.com/BishwaNathRoy29/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition hover:scale-125">
                                 <FaFacebook />
                             </a>
                         </div>
@@ -65,7 +65,7 @@ export default function Footer() {
                         </p>
 
                         <p className="text-gray-400 text-center md:text-right text-xs mt-4">
-                            Built with ❤️ by Dev
+                            Built with ❤️ by Bishwa Nath Roy
                         </p>
                     </div>
 

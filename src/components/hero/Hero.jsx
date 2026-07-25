@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import MagneticButton from "../MagneticButton";
@@ -20,7 +20,10 @@ export default function ProHero() {
     const imgRef = useRef(null);
     const glowRef = useRef(null);
 
+    const [mounted, setMounted] = useState(false);
+
     useEffect(() => {
+        setMounted(true);
         const tl = gsap.timeline();
 
         tl.from(titleRef.current, {
@@ -117,19 +120,21 @@ export default function ProHero() {
                     Hi, I'm Bishwa 👋
                 </h1>
 
-                <div ref={textRef} className="text-sm md:text-xl text-gray-300">
-                    <Typewriter
-                        options={{
-                            strings: [
-                                "Frontend Developer 💻",
-                                "Next.js Engineer ⚡",
-                                "GSAP Animator 🚀",
-                                "UI Architect 🎨",
-                            ],
-                            autoStart: true,
-                            loop: true,
-                        }}
-                    />
+                <div ref={textRef} className="text-sm md:text-xl text-gray-300 min-h-[28px]">
+                    {mounted && (
+                        <Typewriter
+                            options={{
+                                strings: [
+                                    "Frontend Developer 💻",
+                                    "Next.js Engineer ⚡",
+                                    "GSAP Animator 🚀",
+                                    "UI Architect 🎨",
+                                ],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
+                    )}
                 </div>
 
                 <p className="text-sm md:text-lg text-gray-400 max-w-md mx-auto md:mx-0">

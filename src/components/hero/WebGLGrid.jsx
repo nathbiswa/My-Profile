@@ -33,8 +33,9 @@ export default function WebGLGrid() {
         camera.position.z = 25;
         camera.position.y = 6;
 
+        let rafId;
         const animate = () => {
-            requestAnimationFrame(animate);
+            rafId = requestAnimationFrame(animate);
 
             grid.rotation.y += 0.001;
             grid.rotation.x = Math.sin(Date.now() * 0.0005) * 0.2;
@@ -45,7 +46,11 @@ export default function WebGLGrid() {
         animate();
 
         return () => {
-            mountRef.current.removeChild(renderer.domElement);
+            cancelAnimationFrame(rafId);
+            if (mountRef.current) {
+                mountRef.current.removeChild(renderer.domElement);
+            }
+            renderer.dispose();
         };
     }, []);
 

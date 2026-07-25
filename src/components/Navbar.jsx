@@ -66,8 +66,11 @@ export default function Navbar() {
 
     // 🌈 CURSOR PROXIMITY GLOW
     useEffect(() => {
+        const el = navRef.current;
+        if (!el) return;
+
         const move = (e) => {
-            const rect = navRef.current.getBoundingClientRect();
+            const rect = el.getBoundingClientRect();
 
             const distX = e.clientX - rect.left;
             const distY = e.clientY - rect.top;
@@ -84,12 +87,12 @@ export default function Navbar() {
             gsap.to(glowRef.current, { opacity: 0, duration: 0.5 });
         };
 
-        navRef.current.addEventListener("mousemove", move);
-        navRef.current.addEventListener("mouseleave", leave);
+        el.addEventListener("mousemove", move);
+        el.addEventListener("mouseleave", leave);
 
         return () => {
-            navRef.current.removeEventListener("mousemove", move);
-            navRef.current.removeEventListener("mouseleave", leave);
+            el.removeEventListener("mousemove", move);
+            el.removeEventListener("mouseleave", leave);
         };
     }, []);
 
