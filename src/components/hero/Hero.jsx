@@ -150,8 +150,9 @@ export default function ProHero() {
 
                     {/* Resume */}
                     <a
-                        href="/resume.pdf"
-                        download
+                        href="https://drive.google.com/file/d/12Sq1Ttb3W6GEAqiNERXnJtKSWeEwOfWx/view?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="px-6 py-3 rounded-full border border-white/20 text-white/80 hover:bg-white/10 transition"
                     >
                         Download CV
