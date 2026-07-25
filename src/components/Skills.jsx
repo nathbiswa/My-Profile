@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import SkillCard from "./SkillCard";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGithub } from "react-icons/fa";
-import { SiJavascript, SiNextdotjs, SiMongodb, SiTailwindcss } from "react-icons/si";
+import { SiJavascript, SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -21,6 +21,7 @@ export default function Skills() {
                 { name: "HTML", icon: FaHtml5, color: "text-orange-500" },
                 { name: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
                 { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+                { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
                 { name: "React", icon: FaReact, color: "text-cyan-400" },
                 { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
                 { name: "Tailwind", icon: SiTailwindcss, color: "text-teal-400" },
