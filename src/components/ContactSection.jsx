@@ -84,22 +84,49 @@ export default function ContactSection() {
         setLoading(true);
         setStatus(null);
 
-        setTimeout(() => {
+        // ⚠️ Replace this with your actual Web3Forms Access Key
+        const accessKey = "38896e57-6639-483c-9b55-3f2b78477eed";
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: accessKey,
+                    name: form.name,
+                    email: form.email,
+                    message: form.message,
+                }),
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                setStatus("success");
+                gsap.fromTo(
+                    successRef.current,
+                    { scale: 0.8, opacity: 0 },
+                    { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }
+                );
+
+                setTimeout(() => {
+                    setStatus(null);
+                }, 3000);
+
+                setForm({ name: "", email: "", message: "" });
+            } else {
+                console.error("Web3Forms Error:", result);
+                setStatus("error");
+            }
+        } catch (error) {
+            console.error("Submission Error:", error);
+            setStatus("error");
+        } finally {
             setLoading(false);
-            setStatus("success");
-
-            gsap.fromTo(
-                successRef.current,
-                { scale: 0.8, opacity: 0 },
-                { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }
-            );
-
-            setTimeout(() => {
-                setStatus(null);
-            }, 2000);
-
-            setForm({ name: "", email: "", message: "" });
-        }, 1200);
+        }
     };
 
     useEffect(() => {
